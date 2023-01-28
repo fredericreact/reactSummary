@@ -5,6 +5,11 @@ import NewPost from './NewPost'
 import Modal from './Modal'
 
 const PostsList = ({isPosting, onStopPosting}) => {
+const [posts,setPosts] = useState({})
+
+const addPostHandler = (postData) => {
+    setPosts((existingPosts)=>[postData, ...existingPosts])
+}
 
 return (
 <>
@@ -13,6 +18,7 @@ return (
 <NewPost 
 
 onCancel ={onStopPosting}    
+onAddPost={addPostHandler}
 />
 </Modal> 
 }

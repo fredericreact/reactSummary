@@ -1,5 +1,3 @@
-
-
 const Post = (props) => {
  
     return ( 
